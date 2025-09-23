@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Світлофор - симулятор</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Світлофор</h1>
+  <div class="traffic">
+    <div id="red" class="light red"></div>
+    <div id="yellow" class="light yellow"></div>
+    <div id="green" class="light green"></div>
+  </div>
+  <button id="next">Змінити колір</button>
+  <script>
+    const red = document.getElementById('red');
+    const yellow = document.getElementById('yellow');
+    const green = document.getElementById('green');
+    const states = [{r:true,y:false,g:false},{r:false,y:true,g:false},{r:false,y:false,g:true}];
+    let idx = 0;
+    function render() {
+        red.classList.toggle('on', states[idx].r);
+        yellow.classList.toggle('on', states[idx].y);
+        green.classList.toggle('on', states[idx].g);
+    }
+    document.getElementById('next').onclick = function() { idx = (idx+1) % states.length; render(); };
+    render();
+  </script>
+</body>
+</html>

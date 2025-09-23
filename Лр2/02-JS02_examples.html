@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>02-JS02 - Приклади виведення</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Приклади виведення даних у JavaScript</h1>
+  <div class="temp m1"></div>
+  <div id="consoleArea" class="temp"></div>
+  <button id="showAlert">Показати alert</button>
+  <script>
+    var sum = 0.1 + 0.2;
+    document.getElementsByClassName('m1')[0].innerHTML = "innerHTML: 0.1 + 0.2 = " + sum;
+    console.log('innerHTML done');
+    document.write("<p>document.write: 9 + 10 = " + (9+10) + "</p>");
+    document.getElementById('showAlert').onclick = function() {
+        alert('Це alert: важлива інформація!');
+    };
+    console.log('console.log: 20 + 17 =', 20 + 17);
+    document.getElementById('consoleArea').innerText = 
+    'Перегляньте консоль (DevTools) для повідомлень console.log.';
+  </script>
+</body>
+</html>

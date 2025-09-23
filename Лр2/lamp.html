@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лампа - Включити/Вимкнути</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Лампочка</h1>
+  <div class="lamp">
+    <div id="bulb" class="bulb off"></div>
+  </div>
+  <button id="onBtn">Включити</button>
+  <button id="offBtn">Вимкнути</button>
+  <script>
+    const bulb = document.getElementById('bulb');
+    document.getElementById('onBtn').onclick = function() {
+        bulb.classList.add('on'); bulb.classList.remove('off');
+    };
+    document.getElementById('offBtn').onclick = function() {
+        bulb.classList.remove('on'); bulb.classList.add('off');
+    };
+  </script>
+</body>
+</html>
