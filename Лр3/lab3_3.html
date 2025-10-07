@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Практична робота №3 – Видалення символу</title>
+</head>
+<body>
+  <h2>Видалення останнього символу</h2>
+  <p id="sentence">Я вивчаю JavaScript!</p>
+  <button onclick="deleteLastChar()">Видалити останній символ</button>
+  <script>
+    function deleteLastChar() {
+      let p = document.getElementById("sentence");
+      p.textContent = p.textContent.slice(0, -1);
+    }
+  </script>
+</body>
+</html>
