@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Практична робота №3 – Завдання 5.2</title>
+</head>
+<body>
+  <h2>Практична робота №3 – Завдання 5.2</h2>
+  <script>
+    function getProperty(obj, key) {
+      return obj[key];
+    }
+    function addProperty(obj, key) {
+      obj[key] = true;
+      return obj[key];
+    }
+    function removeProperty(obj, key) {
+      delete obj[key];
+    }
+    function getFullName(firstName, lastName) {
+      return firstName + " " + lastName;
+    }
+    function getLengthOfWord(word) {
+      return word.length;
+    }
+    function getLengthOfTwoWords(word1, word2) {
+      return word1.length + word2.length;
+    }
+    function isGreaterThan(num1, num2) {
+      return num1 > num2;
+    }
+    function isEven(num) {
+      return num % 2 === 0;
+    }
+    function isSameLength(word1, word2) {
+      return word1.length === word2.length;
+    }
+    function isEvenAndGreaterThanTen(num) {
+      return num % 2 === 0 && num > 10;
+    }
+    function computeAreaOfATriangle(base, height) {
+      return 0.5 * base * height;
+    }
+    console.log("5.2.1 getProperty:", getProperty({name: "Марина"}, "name"));
+    console.log("5.2.2 addProperty:", addProperty({}, "active"));
+    let obj = {name: "Іван", age: 20};
+    removeProperty(obj, "age");
+    console.log("5.2.3 removeProperty:", obj);
+    console.log("5.2.4 getFullName:", getFullName("Марина", "Стенюк"));
+    console.log("5.2.5 getLengthOfWord:", getLengthOfWord("JavaScript"));
+    console.log("5.2.6 getLengthOfTwoWords:", getLengthOfTwoWords("hello", "world"));
+    console.log("5.2.7 isGreaterThan:", isGreaterThan(10, 5));
+    console.log("5.2.8 isEven:", isEven(4));
+    console.log("5.2.9 isSameLength:", isSameLength("cat", "dog"));
+    console.log("5.2.10 isEvenAndGreaterThanTen:", isEvenAndGreaterThanTen(12));
+    console.log("5.2.11 computeAreaOfATriangle:", computeAreaOfATriangle(10, 5));
+  </script>
+</body>
+</html>
