@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Запобігання спливанню подій</title>
+  <style>
+    h1 { color: #ff00ff; cursor: pointer; }
+    #k1 {
+      position: absolute; left: 50px; top: 200px;
+      width: 300px; height: 100px; background-color: blue;
+    }
+    #k2 {
+      position: relative; left: 50px; top: 25px;
+      width: 200px; height: 50px; background-color: yellow;
+    }
+  </style>
+</head>
+<body id="B" bgcolor="#AAAAAA" onclick="rodEl()" style="height: 600px;">
+  <h1 id="HH" onclick="H_l()">КОЛІР</h1>
+  <div id="k1" onclick="D_l()">
+    <div id="k2" onclick="D_2(this)"></div>
+  </div>
+  <script>
+    function rodEl() {
+      let z = document.body.style.backgroundColor;
+      document.body.style.backgroundColor = (z !== "rgb(119, 119, 119)") ? "#777777" : "#AAAAAA";
+    }
+    function D_l() {
+      window.event.cancelBubble = true;
+      let z = document.getElementById("k1").style.backgroundColor;
+      document.getElementById("k1").style.backgroundColor = (z !== "red") ? "red" : "green";
+    }
+    function D_2(thi) {
+      window.event.cancelBubble = true;
+      let z = thi.style.backgroundColor;
+      thi.style.backgroundColor = (z === "rgb(255, 0, 255)") ? "#00ffff" : "#ff00ff";
+    }
+    function H_l() {
+      window.event.cancelBubble = true;
+      let h = document.getElementById("HH");
+      let c = h.style.color;
+      h.style.color = (c === "rgb(170, 0, 170)") ? "#00ffff" : "#aa00aa";
+    }
+  </script>
+</body>
+</html>
