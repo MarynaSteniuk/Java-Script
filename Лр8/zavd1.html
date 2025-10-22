@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Події з мишкою</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+    }
+    p {
+      font-size: 20pt;
+      transition: all 0.3s ease;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>П’ять подій з мишкою</h1>
+  <p id="clickText" onclick="changeClickText()">Клацніть на мене мишкою</p>
+  <p id="holdText" onmousedown="downBg()" onmouseup="upBg()">На цьому тексті натисніть, потримайте і відпустіть ліву кнопку мишки</p>
+  <p id="hoverText" onmouseover="hoverIn()" onmouseout="hoverOut()">Повільно проведіть курсором мишки по цій написи</p>
+  <script>
+    let clicked = false;
+    function changeClickText() {
+      const t = document.getElementById("clickText");
+      if (!clicked) {
+        t.style.fontSize = "48pt";
+        t.style.color = "white";
+        t.style.backgroundColor = "lightblue";
+      } else {
+        t.style.fontSize = "20pt";
+        t.style.color = "black";
+        t.style.backgroundColor = "transparent";
+      }
+      clicked = !clicked;
+    }
+
+    function downBg() {
+      document.getElementById("holdText").style.backgroundColor = "green";
+    }
+    function upBg() {
+      document.getElementById("holdText").style.backgroundColor = "yellow";
+    }
+
+    function hoverIn() {
+      document.getElementById("hoverText").style.backgroundColor = "red";
+    }
+    function hoverOut() {
+      document.getElementById("hoverText").style.backgroundColor = "lightblue";
+    }
+  </script>
+</body>
+</html>
