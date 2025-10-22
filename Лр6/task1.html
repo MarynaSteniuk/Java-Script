@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 1 — Поточна дата і час</title>
+</head>
+<body>
+  <h2>Поточна дата і час</h2>
+  <script>
+    const now=new Date();
+    let hours=now.getHours();
+    let minutes=now.getMinutes();
+    if (minutes<10) minutes="0"+minutes;
+    document.write("<b>Час:</b> "+hours+":"+minutes+"<br>");
+    document.write("<b>Дата:</b> "+(now.getMonth()+1)+"/"+now.getDate()+"/"+now.getFullYear());
+  </script>
+</body>
+</html>
