@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Доступ до властивостей і методів</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h2, p, div {
+      font-size: 24px;
+      padding: 15px;
+      margin: 15px auto;
+      width: 60%;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    h2 { background-color: yellow; color: black; }
+    p { background-color: white; color: red; }
+    div { background-color: blue; color: white; }
+  </style>
+</head>
+<body>
+  <h2 id="row1" onclick="changeRow1()">Доступ до властивостей і методів</h2>
+  <p id="row2" onclick="changeRow2()">Колекція all</p>
+  <div id="row3" onclick="changeRow3()">Метод getElementById()</div>
+  <script>
+    let flag1=true, flag2=true, flag3=true;
+    function changeRow1() {
+      const el=document.getElementById("row1");
+      if (flag1) {
+        el.style.backgroundColor="blue";
+        el.style.color="white";
+      } else {
+        el.style.backgroundColor="yellow";
+        el.style.color="black";
+      }
+      flag1=!flag1;
+    }
+    function changeRow2() {
+      const el=document.all.row2;
+      if (flag2) {
+        el.style.backgroundColor="green";
+        el.style.color="white";
+      } else {
+        el.style.backgroundColor="white";
+        el.style.color="red";
+      }
+      flag2=!flag2;
+    }
+    function changeRow3() {
+      const el=document.getElementById("row3");
+      if (flag3) {
+        el.style.backgroundColor="yellow";
+        el.style.color="black";
+      } else {
+        el.style.backgroundColor="blue";
+        el.style.color="white";
+      }
+      flag3=!flag3;
+    }
+  </script>
+</body>
+</html>
