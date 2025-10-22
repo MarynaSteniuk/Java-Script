@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Події зображення</title>
+  <style>
+    body { text-align: center; margin-top: 50px; }
+    img { width: 300px; cursor: pointer; }
+    p { font-size: 22pt; cursor: pointer; }
+  </style>
+</head>
+<body id="parent" onclick="handleClick(event)">
+
+  <img id="photo" src="https://picsum.photos/300/200?random=1" alt="Фото">
+  <p id="caption">Це гарне зображення</p>
+
+  <script>
+    function handleClick(event) {
+      const elem = event.target;
+      if (elem.id === "caption") {
+        elem.style.color = elem.style.color === "blue" ? "black" : "blue";
+      } else if (elem.id === "photo") {
+        document.getElementById("photo").src = "https://picsum.photos/300/200?random=" + Math.floor(Math.random() * 100);
+        document.getElementById("caption").textContent = "Зображення змінено!";
+      }
+    }
+  </script>
+</body>
+</html>
