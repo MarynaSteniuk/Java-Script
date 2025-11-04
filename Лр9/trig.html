@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Тригонометричні функції</title>
+  <style>
+    body {
+      background-color: #fff6fa;
+      font-family: 'Segoe UI', sans-serif;
+      color: #660033;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h2 {
+      color: #b0006d;
+      margin-bottom: 20px;
+    }
+    .calc-box {
+      background-color: #ffe6ef;
+      display: inline-block;
+      padding: 30px 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #f3b2cd;
+    }
+    input, select, button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #f3a9c9;
+      font-size: 16px;
+      background-color: #fff0f7;
+    }
+    button {
+      background-color: #ffb6d9;
+      color: #660033;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ffcde3;
+      transform: scale(1.05);
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #b0006d;
+    }
+  </style>
+</head>
+<body>
+  <h2>Обчислення тригонометричних функцій</h2>
+
+  <div class="calc-box">
+    <label>Оберіть функцію:</label><br>
+    <select id="func">
+      <option value="sin">sin</option>
+      <option value="cos">cos</option>
+      <option value="tan">tan</option>
+    </select><br>
+
+    <label>Введіть аргумент (градуси):</label><br>
+    <input type="number" id="arg" placeholder="Наприклад, 45" onchange="validate(this)"><br>
+
+    <button onclick="calculate()">Обчислити</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function validate(fld) {
+      const val = fld.value;
+      if (val === "" || isNaN(val)) {
+        alert("Будь ласка, введіть числове значення!");
+        fld.focus();
+        fld.select();
+        return false;
+      }
+      return true;
+    }
+
+    function calculate() {
+      let func = document.getElementById("func").value;
+      let arg = document.getElementById("arg").value;
+
+      if (arg === "") {
+        alert("Введіть аргумент!");
+        return;
+      }
+
+      let radians = arg * Math.PI / 180;
+      let expression = "Math." + func + "(" + radians + ")";
+      let result = eval(expression);
+
+      document.getElementById("result").innerHTML = 
+        `Результат ${func}(${arg}°) = <b>${result.toFixed(4)}</b>`;
+    }
+  </script>
+</body>
+</html>
