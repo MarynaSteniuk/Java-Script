@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 2 — Зміна стилю</title>
+<style>
+body {
+  background: linear-gradient(135deg, #ffeaf5, #fff0f8);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: #4a004a;
+  padding-top: 100px;
+}
+button {
+  background: #ff66a3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #ff3385;
+}
+p {
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 2. Зміна стилю тексту</h1>
+  <p id="text">I am learning JavaScript events!</p>
+  <button onclick="changeCSS()">Change style!</button>
+
+<script>
+function changeCSS() {
+  const p = document.getElementById('text');
+  p.style.color = 'orange';
+  p.style.fontSize = '20px';
+  p.style.fontFamily = '"Comic Sans MS", cursive';
+}
+</script>
+</body>
+</html>
