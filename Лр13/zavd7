@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 7 — Країни і міста</title>
+<style>
+body {
+  background: #fff0f6;
+  font-family: 'Segoe UI';
+  color: #4a004a;
+  text-align: center;
+  padding-top: 80px;
+}
+select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ffb6d9;
+  margin: 10px;
+  font-size: 16px;
+}
+p {
+  color: #d63384;
+  font-weight: bold;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 7. Країни та міста</h1>
+  <select id="country">
+    <option value="ger">Germany</option>
+    <option value="usa">USA</option>
+    <option value="ukr">Ukraine</option>
+  </select>
+  <select id="cities"></select>
+  <p id="output"></p>
+<script>
+const countrySelect = document.getElementById('country');
+const citySelect = document.getElementById('cities');
+const output = document.getElementById('output');
+const data = {
+  ger: ['Berlin', 'Hamburg', 'Munich'],
+  usa: ['New York', 'Los Angeles', 'Chicago'],
+  ukr: ['Kyiv', 'Lviv', 'Odessa']
+};
+function updateCities() {
+  const selected = countrySelect.value;
+  citySelect.innerHTML = "";
+  data[selected].forEach(city => {
+    const opt = document.createElement('option');
+    opt.text = city;
+    citySelect.add(opt);
+  });
+  updateOutput();
+}
+function updateOutput() {
+  output.innerText = `Обрана країна: ${countrySelect.options[countrySelect.selectedIndex].text}, Місто: ${citySelect.value}`;
+}
+countrySelect.onchange = updateCities;
+citySelect.onchange = updateOutput;
+updateCities();
+</script>
+</body>
+</html>
