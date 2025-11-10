@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна №12 — Тригонометрична таблиця</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Обчислення тригонометричної функції</h1>
+
+    <form id="inputForm" onsubmit="return false;">
+      <label>Початковий кут (°):
+        <input type="text" id="start" placeholder="напр. 0" onchange="isNumb(this)">
+      </label>
+
+      <label>Кінцевий кут (°):
+        <input type="text" id="end" placeholder="напр. 90" onchange="isNumb(this)">
+      </label>
+
+      <label>Крок (°):
+        <input type="text" id="step" placeholder="напр. 10" onchange="isNumb(this)">
+      </label>
+
+      <label>Функція:
+        <select id="func">
+          <option value="sin">sin</option>
+          <option value="cos">cos</option>
+          <option value="tan">tg</option>
+        </select>
+      </label>
+
+      <div class="controls">
+        <button type="button" onclick="openTable()">Обчислити і відкрити таблицю</button>
+        <button type="button" onclick="resetForm()" class="secondary">Скинути</button>
+      </div>
+
+      <p class="note">Перевірка введення відбувається при зміні поля.</p>
+    </form>
+  </div>
+</body>
+</html>
