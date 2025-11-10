@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 4 — Видалення елемента</title>
+<style>
+body {
+  background: linear-gradient(135deg, #ffeaf5, #fff0f6);
+  font-family: 'Segoe UI';
+  color: #4a004a;
+  text-align: center;
+  padding-top: 100px;
+}
+select, button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ffb6d9;
+  font-size: 16px;
+  margin: 10px;
+}
+button {
+  background: #ff66a3;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff3385;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 4. Видалення елемента списку</h1>
+  <select id="mySelect">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Cherry</option>
+    <option>Orange</option>
+  </select>
+  <button onclick="deleteOption()">Видалити вибране</button>
+
+<script>
+function deleteOption() {
+  const sel = document.getElementById('mySelect');
+  if (sel.selectedIndex !== -1) {
+    sel.remove(sel.selectedIndex);
+  }
+}
+</script>
+</body>
+</html>
