@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна №15 💗 Використання jQuery</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f7, #ffd6eb);
+      color: #b30059;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #cc0066;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    .task {
+      background: #fff0fa;
+      border: 2px solid #ffb6d5;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 25px auto;
+      width: 85%;
+      box-shadow: 0 4px 10px rgba(255, 182, 213, 0.4);
+      text-align: left;
+    }
+    button {
+      background-color: #ff80bf;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #ff4da6;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>💗 Лабораторна робота №15 — Використання бібліотеки jQuery 💗</h1>
+  <div class="task">
+    <h3>1. Посилання з target="_blank"</h3>
+    <a href="https://example.com">Google</a><br>
+    <a href="http://example.org">Not secure link</a><br>
+    <button onclick="task1()">Виконати</button>
+  </div>
+  <div class="task">
+    <h3>2. Зміна стилів для h2.head і .inner</h3>
+    <h2 class="head">header1</h2>
+    <h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+    <h2>header3</h2>
+    <h2 class="head">header4 <span>inner elem2</span></h2>
+    <button onclick="task2()">Виконати</button>
+  </div>
+  <div class="task">
+    <h3>3. Перемістити div перед h3</h3>
+    <h3>header1</h3>
+    <div>text1</div>
+    <h3>header2</h3>
+    <div>text2</div>
+    <button onclick="task3()">Виконати</button>
+  </div>
+  <div class="task">
+    <h3>4. Активність чекбоксів</h3>
+    <label><input type="checkbox" class="check"> Варіант 1</label>
+    <label><input type="checkbox" class="check"> Варіант 2</label>
+    <label><input type="checkbox" class="check"> Варіант 3</label>
+    <label><input type="checkbox" class="check"> Варіант 4</label>
+    <label><input type="checkbox" class="check"> Варіант 5</label>
+    <label><input type="checkbox" class="check"> Варіант 6</label>
+  </div>
+  <div class="task">
+    <h3>5–9. Деструктурування, функції та Map</h3>
+    <button onclick="runTasks()">Перевірити у консолі</button>
+    <p>Результати дивись у консолі (Ctrl + Shift + I → Console)</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
