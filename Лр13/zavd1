@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 1 — Робота з вікном</title>
+<style>
+body {
+  background: linear-gradient(135deg, #ffd6eb, #fff0f6);
+  color: #4a004a;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+button {
+  background: #ff66a3;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #ff3399;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 1. Робота з об’єктом window</h1>
+  <button onclick="openWin()">Відкрити нове вікно</button>
+
+<script>
+let myWindow;
+
+function openWin() {
+  myWindow = window.open("", "", "width=300,height=300");
+  myWindow.document.write("<h2 style='color:#d63384;text-align:center;'>Нове вікно</h2>");
+
+  setTimeout(() => myWindow.resizeTo(500, 500), 2000);
+  setTimeout(() => myWindow.moveTo(200, 200), 4000);
+  setTimeout(() => myWindow.close(), 6000);
+}
+</script>
+</body>
+</html>
