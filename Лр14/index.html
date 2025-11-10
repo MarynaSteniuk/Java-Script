@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №14 💗 Валідація даних у формах</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd6eb, #ffe6f7);
+      font-family: "Poppins", sans-serif;
+      color: #b30059;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #cc0066;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    .task {
+      background: #fff0fa;
+      border: 2px solid #ffb6d5;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 4px 10px rgba(255, 182, 213, 0.4);
+    }
+    input {
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #ff99cc;
+      margin-right: 10px;
+      color: #b30059;
+    }
+    button {
+      background-color: #ff80bf;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff4da6;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>💗 Лабораторна робота №14 — Валідація даних у JS 💗</h1>
+  <div class="task">
+    <h3>1. Перевірка великої літери</h3>
+    <input type="text" id="input1" placeholder="Введіть рядок">
+    <button onclick="task1()">Перевірити</button>
+    <div class="result" id="res1"></div>
+  </div>
+  <div class="task">
+    <h3>2. Перевірка Email</h3>
+    <input type="text" id="input2" placeholder="Введіть email">
+    <button onclick="task2()">Перевірити</button>
+    <div class="result" id="res2"></div>
+  </div>
+  <div class="task">
+    <h3>3. Знайти шаблон d+b+d</h3>
+    <input type="text" id="input3" placeholder="Введіть рядок">
+    <button onclick="task3()">Шукати</button>
+    <div class="result" id="res3"></div>
+  </div>
+  <div class="task">
+    <h3>4. Міняємо два слова місцями</h3>
+    <input type="text" id="input4" placeholder="Наприклад: Java Script">
+    <button onclick="task4()">Замінити</button>
+    <div class="result" id="res4"></div>
+  </div>
+  <div class="task">
+    <h3>5. Валідація номера картки</h3>
+    <input type="text" id="input5" placeholder="9999-9999-9999-9999">
+    <button onclick="task5()">Перевірити</button>
+    <div class="result" id="res5"></div>
+  </div>
+  <div class="task">
+    <h3>6. Строга перевірка Email</h3>
+    <input type="text" id="input6" placeholder="Введіть email">
+    <button onclick="task6()">Перевірити</button>
+    <div class="result" id="res6"></div>
+  </div>
+  <div class="task">
+    <h3>7. Перевірка логіна + числа</h3>
+    <input type="text" id="input7" placeholder="Наприклад: ee1.1ret3">
+    <button onclick="task7()">Перевірити</button>
+    <div class="result" id="res7"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
