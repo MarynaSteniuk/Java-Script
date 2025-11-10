@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 5 — Події миші</title>
+<style>
+body {
+  background: #fff0f8;
+  text-align: center;
+  font-family: 'Segoe UI';
+  padding-top: 100px;
+  color: #4a004a;
+}
+button {
+  background: #ff66a3;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff3385;
+}
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #d63384;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 5. Повідомлення при подіях миші</h1>
+  <button id="btn">Натисни або наведи</button>
+  <p id="message"></p>
+
+<script>
+const msg = document.getElementById('message');
+const btn = document.getElementById('btn');
+
+btn.onclick = () => msg.innerText = "I was pressed!";
+btn.onmouseover = () => msg.innerText = "Mouse on me!";
+btn.onmouseout = () => msg.innerText = "Mouse is not on me!";
+</script>
+</body>
+</html>
