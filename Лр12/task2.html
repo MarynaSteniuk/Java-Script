@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна №12 — Облік товарів</title>
+  <link rel="stylesheet" href="task2.css">
+  <script src="task2.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Облік товарів</h1>
+    <table id="goodsTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Товар</th>
+          <th>Кількість</th>
+          <th>Ціна (грн)</th>
+          <th>Сума (грн)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>Тюльпани</td><td>10</td><td>50</td><td>500</td>
+        </tr>
+        <tr>
+          <td>2</td><td>Троянди</td><td>8</td><td>70</td><td>560</td>
+        </tr>
+        <tr>
+          <td>3</td><td>Орхідеї</td><td>5</td><td>120</td><td>600</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="inputs">
+      <label>Рядок №:
+        <input type="number" id="rowIndex" min="1" placeholder="1">
+      </label>
+      <label>Нова кількість:
+        <input type="number" id="newQty" placeholder="напр. 12">
+      </label>
+      <label>Нова ціна (грн):
+        <input type="number" id="newPrice" placeholder="напр. 55">
+      </label>
+      <div class="controls">
+        <button type="button" onclick="updateRow()">Оновити</button>
+        <button type="button" onclick="addRow()" class="secondary">Додати товар</button>
+        <button type="button" onclick="deleteRow()" class="danger">Видалити рядок</button>
+      </div>
+    </div>
+    <h2 id="total">Загальна сума: 1660.00 грн</h2>
+  </div>
+</body>
+</html>
