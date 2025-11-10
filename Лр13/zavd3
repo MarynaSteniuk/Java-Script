@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 3 — Події</title>
+<style>
+body {
+  background: #fff0f6;
+  text-align: center;
+  font-family: 'Segoe UI';
+  color: #4a004a;
+  padding-top: 80px;
+}
+button, a {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  background: #ff66a3;
+  width: 200px;
+  transition: 0.3s;
+}
+button:hover, a:hover {
+  background: #ff3385;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 3. Події на кнопках і лінку</h1>
+
+  <button id="btn1">Змінити фон на синій</button>
+  <button id="btn2">Змінити фон на рожевий</button>
+  <button id="btn3">Коричневий при утриманні</button>
+  <a href="#">Наведи на мене</a>
+
+<script>
+const body = document.body;
+document.getElementById('btn1').onclick = () => body.style.background = 'lightblue';
+document.getElementById('btn2').ondblclick = () => body.style.background = 'pink';
+document.getElementById('btn3').onmousedown = () => body.style.background = 'saddlebrown';
+document.getElementById('btn3').onmouseup = () => body.style.background = 'white';
+document.querySelector('a').onmouseover = () => body.style.background = 'yellow';
+document.querySelector('a').onmouseout = () => body.style.background = 'white';
+</script>
+</body>
+</html>
