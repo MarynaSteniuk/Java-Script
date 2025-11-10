@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Завдання 6 — Розмір вікна</title>
+<style>
+body {
+  background: linear-gradient(135deg, #ffd6eb, #fff0f6);
+  font-family: 'Segoe UI';
+  text-align: center;
+  color: #4a004a;
+  padding-top: 100px;
+}
+h2 {
+  color: #d63384;
+}
+</style>
+</head>
+<body>
+  <h1>Завдання 6. Відстеження розміру вікна</h1>
+  <h2 id="size"></h2>
+
+<script>
+function updateSize() {
+  document.getElementById('size').innerText =
+    `Ширина: ${window.innerWidth}px, Висота: ${window.innerHeight}px`;
+}
+window.onresize = updateSize;
+updateSize();
+</script>
+</body>
+</html>
