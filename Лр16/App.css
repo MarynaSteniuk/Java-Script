@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(135deg, #ffe6f7, #ffd6eb);
+}
+
+.game {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  color: #b30059;
+}
+
+.square {
+  background: #fff0fa;
+  border: 2px solid #ff99cc;
+  font-size: 40px;
+  font-weight: bold;
+  color: #cc0066;
+  height: 80px;
+  width: 80px;
+  margin: 4px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.square:hover {
+  background: #ffd6eb;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
