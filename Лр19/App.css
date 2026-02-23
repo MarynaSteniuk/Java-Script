@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(135deg, #ffe6f7, #ffd6eb);
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  color: #b30059;
+}
+h1 {
+  text-align: center;
+}
+.task {
+  background: #fff0fa;
+  border: 2px solid #ffb6d5;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+button {
+  background: #ff80bf;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff4da6;
+}
+input {
+  padding: 6px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #ffb6d5;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid #ff80bf;
+  padding: 6px 10px;
+}
